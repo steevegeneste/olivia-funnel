@@ -1,0 +1,612 @@
+<!DOCTYPE html>                                                                                                       
+  <html lang="fr">                                                                                                      
+  <head>                                                                                                                
+    <meta charset="UTF-8" />                                                                                            
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Le Code Féminin — Formation Gratuite | Olivia Nicholls</title>                                               
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" 
+  />                                                                                                                    
+    <style>       
+      *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }                                         
+                                                                                                                        
+      :root {
+        --navy:   #0f1b2d;                                                                                              
+        --dark:   #1a1a2e;                                                                                              
+        --accent: #c8922a;
+        --accent-hover: #b07a1e;                                                                                        
+        --text:   #1a1a1a;                                                                                              
+        --muted:  #666;                                                                                                 
+        --light:  #f7f7f5;                                                                                              
+        --white:  #ffffff;                                                                                              
+        --border: #e0e0e0;
+      }                                                                                                                 
+                  
+      body {
+        font-family: 'Inter', sans-serif;
+        background: var(--light);
+        color: var(--text);                                                                                             
+        line-height: 1.6;
+      }                                                                                                                 
+                  
+      .header-bar {
+        background: var(--navy);
+        padding: 14px 24px;
+        text-align: center;                                                                                             
+      }
+      .header-bar p {                                                                                                   
+        color: var(--white);
+        font-size: 13px;
+        letter-spacing: 0.05em;                                                                                         
+        text-transform: uppercase;
+        opacity: 0.85;                                                                                                  
+      }                                                                                                                 
+   
+      .hero {                                                                                                           
+        background: var(--white);
+        padding: 60px 24px 48px;
+        text-align: center;
+        border-bottom: 1px solid var(--border);                                                                         
+      }
+                                                                                                                        
+      .hero .badge {
+        display: inline-block;
+        background: #fdf3e3;
+        color: var(--accent);                                                                                           
+        font-size: 12px;
+        font-weight: 700;                                                                                               
+        letter-spacing: 0.08em;
+        text-transform: uppercase;                                                                                      
+        padding: 6px 16px;
+        border-radius: 40px;
+        margin-bottom: 28px;                                                                                            
+        border: 1px solid #f0d9a0;
+      }                                                                                                                 
+                  
+      .hero h1 {                                                                                                        
+        font-size: clamp(26px, 4vw, 42px);
+        font-weight: 800;                                                                                               
+        color: var(--navy);
+        line-height: 1.2;                                                                                               
+        max-width: 820px;
+        margin: 0 auto 20px;                                                                                            
+      }
+                                                                                                                        
+      .hero h1 em {
+        font-style: normal;
+        color: var(--accent);
+      }                                                                                                                 
+   
+      .hero .subtitle {                                                                                                 
+        font-size: clamp(16px, 2vw, 19px);
+        color: #444;
+        max-width: 640px;                                                                                               
+        margin: 0 auto 40px;
+        font-weight: 400;                                                                                               
+      }           
+                                                                                                                        
+      .hero .subtitle strong {
+        color: var(--navy);                                                                                             
+        font-weight: 700;
+      }
+
+      .bullets {
+        background: var(--white);
+        padding: 48px 24px;
+        border-bottom: 1px solid var(--border);                                                                         
+      }
+                                                                                                                        
+      .bullets-inner {
+        max-width: 700px;
+        margin: 0 auto;
+      }
+                                                                                                                        
+      .bullets h2 {
+        font-size: 18px;                                                                                                
+        font-weight: 700;
+        color: var(--navy);
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+        margin-bottom: 28px;                                                                                            
+        text-align: center;
+      }                                                                                                                 
+                  
+      .bullet-list {
+        list-style: none;
+        display: flex;
+        flex-direction: column;                                                                                         
+        gap: 16px;
+      }                                                                                                                 
+                  
+      .bullet-list li {
+        display: flex;
+        align-items: flex-start;
+        gap: 14px;
+        font-size: 16px;
+        color: #333;                                                                                                    
+        line-height: 1.5;
+      }                                                                                                                 
+                  
+      .bullet-list li .icon {                                                                                           
+        flex-shrink: 0;
+        width: 22px;                                                                                                    
+        height: 22px;
+        background: var(--accent);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;                                                                                        
+        margin-top: 2px;
+      }                                                                                                                 
+                  
+      .bullet-list li .icon svg {
+        width: 12px;
+        height: 12px;
+        fill: var(--white);
+      }
+                                                                                                                        
+      .video-section {
+        background: var(--navy);                                                                                        
+        padding: 56px 24px;
+        text-align: center;
+      }
+
+      .video-section .video-label {
+        color: var(--accent);
+        font-size: 13px;                                                                                                
+        font-weight: 700;
+        text-transform: uppercase;                                                                                      
+        letter-spacing: 0.08em;
+        margin-bottom: 16px;                                                                                            
+      }
+                                                                                                                        
+      .video-section h3 {
+        color: var(--white);
+        font-size: clamp(20px, 3vw, 28px);
+        font-weight: 700;                                                                                               
+        max-width: 600px;
+        margin: 0 auto 32px;                                                                                            
+        line-height: 1.3;
+      }                                                                                                                 
+   
+      .video-wrapper {                                                                                                  
+        max-width: 680px;
+        margin: 0 auto;
+        position: relative;
+        cursor: pointer;
+      }                                                                                                                 
+   
+      .video-thumbnail {                                                                                                
+        width: 100%;
+        aspect-ratio: 16 / 9;
+        background: #0a1220;
+        border-radius: 8px;                                                                                             
+        display: flex;
+        align-items: center;                                                                                            
+        justify-content: center;
+        position: relative;
+        overflow: hidden;
+        border: 2px solid rgba(200, 146, 42, 0.3);                                                                      
+        transition: border-color 0.2s;
+      }                                                                                                                 
+                  
+      .video-wrapper:hover .video-thumbnail {                                                                           
+        border-color: var(--accent);
+      }
+
+      .video-thumbnail .thumbnail-bg {                                                                                  
+        position: absolute;
+        inset: 0;                                                                                                       
+        background: linear-gradient(135deg, #0f1b2d 0%, #1a2d4a 100%);
+      }
+                                                                                                                        
+      .video-thumbnail .thumbnail-text {
+        position: relative;                                                                                             
+        z-index: 1;
+        text-align: center;
+        padding: 20px;
+      }
+                                                                                                                        
+      .video-thumbnail .thumbnail-text p {
+        color: rgba(255,255,255,0.6);                                                                                   
+        font-size: 14px;
+        margin-bottom: 20px;
+        font-style: italic;                                                                                             
+      }
+                                                                                                                        
+      .play-btn { 
+        position: relative;
+        z-index: 1;
+        width: 72px;                                                                                                    
+        height: 72px;
+        background: var(--accent);                                                                                      
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 16px;
+        transition: transform 0.2s, background 0.2s;                                                                    
+        box-shadow: 0 0 0 12px rgba(200, 146, 42, 0.15);
+      }                                                                                                                 
+                  
+      .video-wrapper:hover .play-btn {
+        transform: scale(1.08);
+        background: var(--accent-hover);
+      }                                                                                                                 
+   
+      .play-btn svg {                                                                                                   
+        width: 28px;
+        height: 28px;
+        fill: var(--white);
+        margin-left: 4px;
+      }                                                                                                                 
+   
+      .video-thumbnail .cta-hint {                                                                                      
+        position: relative;
+        z-index: 1;
+        color: rgba(255,255,255,0.75);
+        font-size: 14px;                                                                                                
+        font-weight: 500;
+      }                                                                                                                 
+                  
+      .video-section .below-video {                                                                                     
+        color: rgba(255,255,255,0.45);
+        font-size: 12px;                                                                                                
+        margin-top: 16px;
+      }                                                                                                                 
+   
+      .modal-overlay {                                                                                                  
+        display: none;
+        position: fixed;
+        inset: 0;
+        background: rgba(10, 18, 32, 0.85);
+        z-index: 1000;                                                                                                  
+        align-items: center;
+        justify-content: center;                                                                                        
+        padding: 24px;
+      }                                                                                                                 
+   
+      .modal-overlay.active {                                                                                           
+        display: flex;
+      }
+
+      .modal {
+        background: var(--white);
+        border-radius: 12px;
+        padding: 40px 36px;
+        max-width: 480px;                                                                                               
+        width: 100%;
+        position: relative;                                                                                             
+        box-shadow: 0 24px 80px rgba(0,0,0,0.4);
+      }                                                                                                                 
+   
+      .modal-close {                                                                                                    
+        position: absolute;
+        top: 16px;
+        right: 16px;                                                                                                    
+        background: none;
+        border: none;                                                                                                   
+        cursor: pointer;
+        color: var(--muted);
+        font-size: 22px;
+        line-height: 1;                                                                                                 
+        padding: 4px;
+      }                                                                                                                 
+                  
+      .modal-close:hover { color: var(--text); }
+
+      .modal .modal-badge {
+        display: inline-block;
+        background: #fdf3e3;                                                                                            
+        color: var(--accent);
+        font-size: 11px;                                                                                                
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        padding: 5px 12px;                                                                                              
+        border-radius: 40px;
+        margin-bottom: 16px;                                                                                            
+        border: 1px solid #f0d9a0;
+      }
+
+      .modal h4 {                                                                                                       
+        font-size: 22px;
+        font-weight: 800;                                                                                               
+        color: var(--navy);
+        line-height: 1.25;
+        margin-bottom: 8px;                                                                                             
+      }
+                                                                                                                        
+      .modal p.modal-sub {
+        font-size: 14px;
+        color: var(--muted);
+        margin-bottom: 28px;
+        line-height: 1.5;                                                                                               
+      }
+                                                                                                                        
+      .form-group {
+        margin-bottom: 14px;
+      }
+
+      .form-group label {
+        display: block;
+        font-size: 13px;                                                                                                
+        font-weight: 600;
+        color: var(--navy);                                                                                             
+        margin-bottom: 6px;
+      }
+
+      .form-group input {                                                                                               
+        width: 100%;
+        padding: 13px 16px;                                                                                             
+        border: 1.5px solid var(--border);
+        border-radius: 6px;
+        font-size: 15px;
+        font-family: 'Inter', sans-serif;                                                                               
+        color: var(--text);
+        outline: none;                                                                                                  
+        transition: border-color 0.2s;
+        background: #fafafa;                                                                                            
+      }
+                                                                                                                        
+      .form-group input:focus {
+        border-color: var(--accent);
+        background: var(--white);
+      }                                                                                                                 
+   
+      .form-group input::placeholder {                                                                                  
+        color: #bbb;
+      }
+
+      .btn-submit {
+        width: 100%;
+        padding: 16px;                                                                                                  
+        background: var(--accent);
+        color: var(--white);                                                                                            
+        font-size: 16px;
+        font-weight: 700;
+        border: none;
+        border-radius: 6px;                                                                                             
+        cursor: pointer;
+        margin-top: 8px;                                                                                                
+        transition: background 0.2s, transform 0.1s;
+        letter-spacing: 0.02em;
+      }                                                                                                                 
+   
+      .btn-submit:hover {                                                                                               
+        background: var(--accent-hover);
+        transform: translateY(-1px);
+      }
+
+      .btn-submit:active {
+        transform: translateY(0);
+      }
+
+      .modal .privacy-note {
+        font-size: 12px;
+        color: var(--muted);
+        text-align: center;                                                                                             
+        margin-top: 14px;
+        line-height: 1.4;                                                                                               
+      }           
+
+      .credibility {
+        background: var(--white);
+        padding: 48px 24px;                                                                                             
+        text-align: center;
+        border-top: 1px solid var(--border);                                                                            
+      }                                                                                                                 
+   
+      .credibility-inner {                                                                                              
+        max-width: 600px;
+        margin: 0 auto;
+      }
+
+      .credibility .avatar-placeholder {                                                                                
+        width: 80px;
+        height: 80px;                                                                                                   
+        border-radius: 50%;
+        background: linear-gradient(135deg, var(--navy), #2a4a7f);
+        margin: 0 auto 20px;                                                                                            
+        display: flex;                                                                                                  
+        align-items: center;                                                                                            
+        justify-content: center;                                                                                        
+        color: var(--white);
+        font-size: 28px;
+        font-weight: 700;
+      }
+                                                                                                                        
+      .credibility h3 {
+        font-size: 18px;                                                                                                
+        font-weight: 700;
+        color: var(--navy);
+        margin-bottom: 6px;
+      }
+
+      .credibility .role {                                                                                              
+        font-size: 14px;
+        color: var(--accent);                                                                                           
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;                                                                                         
+        margin-bottom: 16px;
+      }                                                                                                                 
+                  
+      .credibility p {
+        font-size: 15px;
+        color: #555;                                                                                                    
+        line-height: 1.6;
+      }                                                                                                                 
+                  
+      .footer {
+        background: var(--navy);
+        padding: 24px;
+        text-align: center;
+      }
+
+      .footer p {
+        color: rgba(255,255,255,0.4);
+        font-size: 12px;
+        line-height: 1.6;                                                                                               
+      }
+                                                                                                                        
+      @media (max-width: 600px) {
+        .hero { padding: 40px 20px 36px; }
+        .bullets { padding: 36px 20px; }
+        .video-section { padding: 40px 20px; }                                                                          
+        .modal { padding: 32px 24px; }
+        .modal h4 { font-size: 20px; }                                                                                  
+      }           
+    </style>                                                                                                            
+  </head>         
+  <body>
+
+    <div class="header-bar">                                                                                            
+      <p>Formation gratuite — Accès immédiat</p>
+    </div>                                                                                                              
+                  
+    <section class="hero">                                                                                              
+      <div class="badge">Formation Gratuite</div>
+      <h1>                                                                                                              
+        Pourquoi plus vous essayez,<br>
+        <em>plus elle s'éloigne</em> — et comment<br>                                                                   
+        inverser ça sans qu'elle ait à changer quoi que ce soit                                                         
+      </h1>                                                                                                             
+      <p class="subtitle">                                                                                              
+        Découvrez <strong>Le Code Féminin</strong> : la méthode en 3 étapes pour recréer connexion et attraction dans   
+  votre couple — même si votre femme refuse de faire des efforts.                                                       
+      </p>
+    </section>                                                                                                          
+                  
+    <section class="bullets">
+      <div class="bullets-inner">
+        <h2>Ce que vous allez découvrir</h2>                                                                            
+        <ul class="bullet-list">
+          <li>                                                                                                          
+            <span class="icon">
+              <svg viewBox="0 0 12 10"><polyline points="1,5 4,8 11,1" stroke="white" stroke-width="2" fill="none" 
+  stroke-linecap="round" stroke-linejoin="round"/></svg>                                                                
+            </span>
+            Pourquoi tout ce que vous avez essayé jusqu'ici a empiré la situation — et ce qui se passe réellement dans  
+  la tête de votre femme                                                                                                
+          </li>
+          <li>                                                                                                          
+            <span class="icon">                                                                                         
+              <svg viewBox="0 0 12 10"><polyline points="1,5 4,8 11,1" stroke="white" stroke-width="2" fill="none" 
+  stroke-linecap="round" stroke-linejoin="round"/></svg>                                                                
+            </span>
+            Le piège dans lequel tombent la plupart des hommes face à une femme distante — et qui accélère son retrait  
+  sans qu'ils le sachent                                                                                                
+          </li>
+          <li>                                                                                                          
+            <span class="icon">
+              <svg viewBox="0 0 12 10"><polyline points="1,5 4,8 11,1" stroke="white" stroke-width="2" fill="none" 
+  stroke-linecap="round" stroke-linejoin="round"/></svg>                                                                
+            </span>
+            Les 3 étapes du Code Féminin pour modifier la dynamique de votre couple seul, sans attendre qu'elle fasse le
+   premier pas                                                                                                          
+          </li>
+          <li>                                                                                                          
+            <span class="icon">
+              <svg viewBox="0 0 12 10"><polyline points="1,5 4,8 11,1" stroke="white" stroke-width="2" fill="none" 
+  stroke-linecap="round" stroke-linejoin="round"/></svg>                                                                
+            </span>
+            Ce qu'une femme ressent vraiment quand elle s'éloigne — et les signaux qui indiquent qu'il est encore temps 
+  d'agir                                                                                                                
+          </li>
+        </ul>                                                                                                           
+      </div>      
+    </section>
+
+    <section class="video-section">
+      <p class="video-label">Formation gratuite</p>
+      <h3>Regardez la vidéo pour découvrir Le Code Féminin</h3>                                                         
+      <div class="video-wrapper" onclick="openModal()">
+        <div class="video-thumbnail">                                                                                   
+          <div class="thumbnail-bg"></div>
+          <div class="thumbnail-text">
+            <div class="play-btn">
+              <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+            </div>                                                                                                      
+            <p class="cta-hint">Cliquez pour accéder à la formation gratuite</p>
+          </div>                                                                                                        
+        </div>    
+      </div>
+      <p class="below-video">Accès immédiat · Aucune carte bancaire requise</p>
+    </section>                                                                                                          
+   
+    <section class="credibility">                                                                                       
+      <div class="credibility-inner">
+        <div class="avatar-placeholder">O</div>
+        <h3>Olivia Nicholls</h3>
+        <p class="role">Sexologue &amp; Coach Couples</p>                                                               
+        <p>A accompagné des hommes à reconstruire leur couple, même quand leur femme avait déjà décroché.</p>
+      </div>                                                                                                            
+    </section>    
+                                                                                                                        
+    <footer class="footer">
+      <p>
+        © 2026 Olivia Nicholls Coaching · Tous droits réservés<br>
+        Les résultats présentés ne sont pas garantis et varient selon les situations individuelles.
+      </p>                                                                                                              
+    </footer>
+                                                                                                                        
+    <div class="modal-overlay" id="modalOverlay" onclick="handleOverlayClick(event)">
+      <div class="modal">
+        <button class="modal-close" onclick="closeModal()">&#x2715;</button>                                            
+        <span class="modal-badge">Accès Gratuit</span>
+        <h4>Où dois-je envoyer votre formation ?</h4>                                                                   
+        <p class="modal-sub">Entrez vos coordonnées pour accéder immédiatement à la formation.</p>                      
+        <form onsubmit="handleSubmit(event)">
+          <div class="form-group">                                                                                      
+            <label for="prenom">Votre prénom</label>
+            <input type="text" id="prenom" name="prenom" placeholder="Ex : Thomas" required autocomplete="given-name" />
+          </div>
+          <div class="form-group">                                                                                      
+            <label for="telephone">Votre numéro de téléphone</label>
+            <input type="tel" id="telephone" name="telephone" placeholder="Ex : 06 12 34 56 78" required                
+  autocomplete="tel" />
+          </div>                                                                                                        
+          <div class="form-group">
+            <label for="email">Votre adresse e-mail</label>                                                             
+            <input type="email" id="email" name="email" placeholder="Ex : thomas@gmail.com" required 
+  autocomplete="email" />                                                                                               
+          </div>  
+          <button type="submit" class="btn-submit">Accéder à la formation gratuite →</button>                           
+        </form>
+        <p class="privacy-note">Vos informations sont confidentielles. Aucun spam.</p>                                  
+      </div>      
+    </div>                                                                                                              
+   
+    <script>                                                                                                            
+      function openModal() {
+        document.getElementById('modalOverlay').classList.add('active');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeModal() {
+        document.getElementById('modalOverlay').classList.remove('active');
+        document.body.style.overflow = '';                                                                              
+      }
+                                                                                                                        
+      function handleOverlayClick(e) {
+        if (e.target === document.getElementById('modalOverlay')) {
+          closeModal();
+        }
+      }
+                                                                                                                        
+      function handleSubmit(e) {
+        e.preventDefault();                                                                                             
+        const prenom = document.getElementById('prenom').value;
+        const telephone = document.getElementById('telephone').value;
+        const email = document.getElementById('email').value;
+        console.log('Lead capturé :', { prenom, telephone, email });
+        window.location.href = 'vsl.html';                                                                              
+      }
+                                                                                                                        
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') closeModal();
+      });                                                                                                               
+    </script>
+                                                                                                                        
+  </body>         
+  </html>
