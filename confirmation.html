@@ -1,0 +1,98 @@
+<!DOCTYPE html>                                                                                                       
+  <html lang="fr">                                                                                                      
+  <head>
+    <meta charset="UTF-8" />                                                                                            
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Appel confirmé | Olivia Nicholls</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"  
+  />
+    <style>                                                                                                             
+      *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }                                         
+      :root {
+        --navy: #0f1b2d; --accent: #c8922a; --text: #1a1a1a; --muted: #666;                                             
+        --light: #f7f7f5; --white: #ffffff; --border: #e0e0e0;                                                          
+        --green: #2d7a4f; --green-bg: #edf7f1;
+      }                                                                                                                 
+      body { font-family: 'Inter', sans-serif; background: var(--light); color: var(--text); line-height: 1.6; }
+      .header-bar { background: var(--navy); padding: 14px 24px; text-align: center; }                                  
+      .header-bar p { color: var(--white); font-size: 13px; letter-spacing: 0.05em; text-transform: uppercase; opacity: 
+  0.85; }                                                                                                               
+      .confirmation { background: var(--white); padding: 60px 24px 48px; text-align: center; border-bottom: 1px solid   
+  var(--border); }                                                                                                      
+      .check-icon { width: 72px; height: 72px; background: var(--green-bg); border-radius: 50%; display: flex;
+  align-items: center; justify-content: center; margin: 0 auto 24px; border: 2px solid #b8ddc8; }                       
+      .check-icon svg { width: 32px; height: 32px; stroke: var(--green); fill: none; stroke-width: 2.5; stroke-linecap:
+  round; stroke-linejoin: round; }                                                                                      
+      .confirmation h1 { font-size: clamp(26px, 4vw, 36px); font-weight: 800; color: var(--navy); line-height: 1.2;
+  max-width: 600px; margin: 0 auto 16px; }                                                                              
+      .confirmation p.sub { font-size: 17px; color: var(--muted); max-width: 500px; margin: 0 auto; line-height: 1.6; }
+      .next-steps { background: var(--light); padding: 48px 24px; }                                                     
+      .next-steps-inner { max-width: 620px; margin: 0 auto; }                                                           
+      .next-steps h2 { font-size: 18px; font-weight: 700; color: var(--navy); text-transform: uppercase; letter-spacing:
+   0.06em; margin-bottom: 28px; text-align: center; }                                                                   
+      .steps-list { display: flex; flex-direction: column; gap: 16px; }
+      .step-item { display: flex; align-items: flex-start; gap: 16px; background: var(--white); border-radius: 8px;     
+  padding: 20px; border: 1px solid var(--border); }                                                                     
+      .step-number { flex-shrink: 0; width: 36px; height: 36px; background: var(--navy); border-radius: 50%; display:
+  flex; align-items: center; justify-content: center; color: var(--white); font-size: 15px; font-weight: 700; }         
+      .step-content h3 { font-size: 15px; font-weight: 700; color: var(--navy); margin-bottom: 4px; }
+      .step-content p { font-size: 14px; color: var(--muted); line-height: 1.5; }                                       
+      .reminder { background: #fdf3e3; border: 1px solid #f0d9a0; border-radius: 8px; padding: 20px 24px; max-width:    
+  620px; margin: 24px auto 0; text-align: center; }                                                                     
+      .reminder p { font-size: 14px; color: #7a5c1e; line-height: 1.6; }                                                
+      .reminder strong { color: var(--accent); }                                                                        
+      .footer { background: var(--navy); padding: 24px; text-align: center; margin-top: 48px; }
+      .footer p { color: rgba(255,255,255,0.4); font-size: 12px; line-height: 1.6; }                                    
+      @media (max-width: 600px) { .confirmation { padding: 48px 20px 36px; } .next-steps { padding: 36px 20px; } }
+    </style>                                                                                                            
+  </head>         
+  <body>                                                                                                                
+    <div class="header-bar"><p>Formation gratuite — Le Code Féminin</p></div>
+    <section class="confirmation">                                                                                      
+      <div class="check-icon">
+        <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>                                              
+      </div>                                                                                                            
+      <h1>Votre appel est confirmé.</h1>
+      <p class="sub">Olivia vous attend. Voici ce qu'il faut faire avant votre appel pour en tirer le maximum.</p>      
+    </section>                                                                                                          
+    <section class="next-steps">
+      <div class="next-steps-inner">                                                                                    
+        <h2>Avant votre appel</h2>
+        <div class="steps-list">
+          <div class="step-item">
+            <div class="step-number">1</div>                                                                            
+            <div class="step-content">
+              <h3>Vérifiez votre email</h3>                                                                             
+              <p>Vous avez reçu un email de confirmation avec le lien et l'heure de votre appel. Vérifiez vos spams si
+  vous ne le trouvez pas.</p>                                                                                           
+            </div>
+          </div>                                                                                                        
+          <div class="step-item">
+            <div class="step-number">2</div>
+            <div class="step-content">                                                                                  
+              <h3>Notez votre situation en 3 phrases</h3>
+              <p>Depuis combien de temps votre femme s'est-elle éloignée ? Qu'avez-vous déjà essayé ? Quel est votre    
+  objectif principal ? Avoir ces réponses en tête rendra l'appel deux fois plus efficace.</p>                           
+            </div>                                                                                                      
+          </div>                                                                                                        
+          <div class="step-item">
+            <div class="step-number">3</div>
+            <div class="step-content">
+              <h3>Soyez dans un endroit calme</h3>
+              <p>Prévoyez 45 à 60 minutes sans interruption. C'est un appel de diagnostic — plus vous êtes disponible,  
+  plus le plan d'action sera précis.</p>                                                                                
+            </div>                                                                                                      
+          </div>                                                                                                        
+        </div>    
+        <div class="reminder">
+          <p><strong>Important :</strong> Si vous ne pouvez pas être présent à l'heure prévue, prévenez-nous dès que
+  possible par email. Les créneaux sont limités.</p>                                                                    
+        </div>
+      </div>                                                                                                            
+    </section>    
+    <footer class="footer">
+      <p>© 2026 Olivia Nicholls Coaching · Tous droits réservés<br>Les résultats présentés ne sont pas garantis et
+  varient selon les situations individuelles.</p>                                                                       
+    </footer>
+  </body>                                                                                                               
+  </html>
