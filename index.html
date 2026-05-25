@@ -233,18 +233,25 @@
   <script>
   function olOpenModal() {
     var overlay = document.getElementById('oliviaModalOverlay');
+    var vidOverlay = document.getElementById('olVidOverlay');
     if (overlay) {
       overlay.classList.add('ol-active');
       document.body.style.overflow = 'hidden';
     }
+    // Cacher la surcouche video pendant que le formulaire est ouvert
+    // (evite que z-index:max intercepte les taps sur les champs du formulaire)
+    if (vidOverlay) vidOverlay.style.display = 'none';
   }
 
   function olCloseModal() {
     var overlay = document.getElementById('oliviaModalOverlay');
+    var vidOverlay = document.getElementById('olVidOverlay');
     if (overlay) {
       overlay.classList.remove('ol-active');
       document.body.style.overflow = '';
     }
+    // Restaurer la surcouche video quand le formulaire se ferme
+    if (vidOverlay) vidOverlay.style.display = '';
   }
   document.addEventListener('keydown', function(e) {
     if (e.key === 'Escape') olCloseModal();
