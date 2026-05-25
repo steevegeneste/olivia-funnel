@@ -3,26 +3,26 @@
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root { --navy: #0f1b2d; --accent: #c8922a; --text: #1a1a1a; --muted: #666; --bg: #f5f0e8; --white: #ffffff;
   --border: #e0d8cc; }
-
+  
     body { font-family: 'Inter', sans-serif !important; background: var(--bg); color: var(--text); }
-
+  
     /* Header bar fixe */
     .vsl-header { position: fixed; top: 0; left: 0; right: 0; z-index: 9998; background: var(--navy); color:
   var(--white); text-align: center; font-family: 'Inter', sans-serif; font-size: 13px; font-weight: 700; letter-spacing:
    0.1em; text-transform: uppercase; padding: 12px 20px; }
-
+  
     /* Wrapper */
     .vsl-wrap { max-width: 680px; margin: 0 auto; padding: 80px 20px 60px; text-align: center; font-family: 'Inter',
   sans-serif; }
-
+  
     /* Badge */
     .vsl-badge { display: inline-flex; align-items: center; gap: 8px; background: var(--navy); color: var(--white);
   font-size: 12px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; padding: 8px 22px; border-radius:
-   40px; margin-bottom: 24px; }
+   40px; margin-bottom: 24px; } 
     @keyframes vslBlink { 0%, 100% { opacity: 1; } 50% { opacity: 0.2; } }
     .vsl-badge .vsl-dot { width: 8px; height: 8px; background: var(--accent); border-radius: 50%; flex-shrink: 0;
   animation: vslBlink 1.4s ease-in-out infinite; }
-
+  
     /* Headline */
     .vsl-h1 { font-size: clamp(22px, 4vw, 30px); font-weight: 900; color: var(--navy); line-height: 1.25; margin-bottom:
    28px; letter-spacing: -0.01em; }
@@ -41,7 +41,7 @@
     .vsl-placeholder-play svg { width: 24px; height: 24px; fill: white; margin-left: 4px; }
     .vsl-placeholder-text { color: rgba(255,255,255,0.4); font-size: 13px; font-style: italic; font-family: 'Inter',
   sans-serif; }
-
+  
     /* Surprise text */
     .vsl-surprise { font-size: 15px; font-weight: 700; color: var(--navy); margin-bottom: 16px; line-height: 1.5; }
 
@@ -59,7 +59,7 @@
   text-transform: none; margin-top: 4px; }
     .vsl-disclaimer { font-size: 13px; color: var(--muted); margin-top: 14px; font-style: italic; line-height: 1.5; }
 
-    /* Separator */
+    /* Separator */   
     .vsl-sep { display: flex; align-items: center; gap: 12px; margin: 36px 0 32px; }
     .vsl-sep::before, .vsl-sep::after { content: ''; flex: 1; height: 1px; background: var(--border); }
     .vsl-diamond { width: 6px; height: 6px; background: var(--accent); transform: rotate(45deg); flex-shrink: 0; }
@@ -77,16 +77,16 @@
     @media (max-width: 480px) { .vsl-wrap { padding-top: 72px; } .vsl-header { font-size: 11px; padding: 10px 16px; }
   .vsl-h1 { font-size: 18px; } }
   </style>
-  
+
   <!-- Header bar -->
   <div class="vsl-header">Ne quitte pas cette page</div>
-
+  
   <!-- Contenu principal -->
   <div class="vsl-wrap">
 
-    <div class="vsl-badge"><span class="vsl-dot"></span>F&eacute;licitations !</div>
+    <div class="vsl-badge"><span class="vsl-dot"></span>Ta formation gratuite</div>
 
-    <h1 class="vsl-h1">Regarde cette vid&eacute;o <strong>jusqu'au bout</strong>&nbsp;:</h1>
+    <h1 class="vsl-h1">Regarde cette vidéo <strong>jusqu'au bout</strong>&nbsp;:</h1>
   
     <div class="vsl-video-wrap">
       <div id="vidalytics_embed_OANjKhF7SURICaR0" style="width: 100%; position:relative; padding-top: 56.25%;"></div>
@@ -106,38 +106,37 @@
   'https://fast.vidalytics.com/embeds/1GVvFh1S/OANjKhF7SURICaR0/');
       </script>
     </div>
-  
-    <!-- Texte "surprise" — disparaît quand le bouton apparaît -->
-    <p class="vsl-surprise" id="olVslSurprise">&#x1F447; Une surprise appara&icirc;tra juste ici dans quelques minutes
-  &#x1F447;</p>
 
+    <!-- Texte "surprise" — disparaît quand le bouton apparaît -->
+    <p class="vsl-surprise" id="olVslSurprise">&#x1F447; Une surprise apparaîtra juste ici dans quelques minutes
+  &#x1F447;</p>
+  
     <div class="vsl-line" id="olVslLine"></div>
   
     <!-- Bouton CTA — caché par défaut, apparaît après délai -->
     <div class="vsl-cta" id="olVslCta" style="display:none">
       <!-- Remplacer # par le lien Calendly d'Olivia -->
       <a href="#" class="vsl-btn">
-        R&eacute;server mon appel gratuit &rarr;
-        <span class="vsl-btn-sub">Olivia Nicholls Coaching &middot; Places limit&eacute;es</span>
+        Réserver mon appel gratuit &rarr;
+        <span class="vsl-btn-sub">Olivia Nicholls Coaching &middot; Places limitées</span>
       </a>
-      <p class="vsl-disclaimer">(R&eacute;serv&eacute; aux hommes qui correspondent au profil d&eacute;crit dans la
-  vid&eacute;o)</p>
+      <p class="vsl-disclaimer">(Réservé aux hommes qui correspondent au profil décrit dans la vidéo)</p>
     </div>
-
+  
     <div class="vsl-sep"><span class="vsl-diamond"></span></div>
 
     <div class="vsl-footer">
       <div class="vsl-footer-links">
-        <a href="https://olivianicholls.site/politique-confidentialite-page">Politique de confidentialit&eacute;</a>
+        <a href="https://olivianicholls.site/politique-confidentialite-page">Politique de confidentialité</a>
         <span class="sep">&middot;</span>
         <a href="https://olivianicholls.site/cgv-page">CGV</a>
       </div>
-      <p class="vsl-footer-copy">&copy; 2026 Olivia Nicholls Coaching &middot; Tous droits r&eacute;serv&eacute;s.</p>
+      <p class="vsl-footer-copy">&copy; 2026 Olivia Nicholls Coaching &middot; Tous droits réservés.</p>
       <p class="vsl-footer-legal">Ce site n'est pas affilié à Facebook™ ou Meta Platforms Inc. Les résultats mentionnés
   sont des témoignages individuels. Vos résultats peuvent varier en fonction de votre situation personnelle et de votre
   implication.</p>
     </div>
-  
+
   </div>
 
   <script>
