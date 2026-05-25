@@ -1,88 +1,164 @@
-<!DOCTYPE html>                                                                                                       
-  <html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Le Code Féminin — Formation Gratuite | Olivia Nicholls</title>                                               
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" 
-  />                                                                                                                    
-    <style>       
-      *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }                                         
-      :root {     
-        --navy: #0f1b2d; --accent: #c8922a; --accent-hover: #b07a1e;
-        --text: #1a1a1a; --muted: #666; --light: #f7f7f5;                                                               
-        --white: #ffffff; --border: #e0e0e0;                                                                            
-      }                                                                                                                 
-      body { font-family: 'Inter', sans-serif; background: var(--light); color: var(--text); line-height: 1.6; }        
-      .header-bar { background: var(--navy); padding: 14px 24px; text-align: center; }
-      .header-bar p { color: var(--white); font-size: 13px; letter-spacing: 0.05em; text-transform: uppercase; opacity: 
-  0.85; }                                                                                                               
-      .hero { background: var(--white); padding: 48px 24px 16px; text-align: center; border-bottom: 1px solid           
-  var(--border); }                                                                                                      
-      .hero .step { display: inline-block; background: #fdf3e3; color: var(--accent); font-size: 12px; font-weight: 700;
-   letter-spacing: 0.08em; text-transform: uppercase; padding: 6px 16px; border-radius: 40px; margin-bottom: 20px;      
-  border: 1px solid #f0d9a0; }
-      .hero h1 { font-size: clamp(22px, 3.5vw, 34px); font-weight: 800; color: var(--navy); line-height: 1.25;          
-  max-width: 700px; margin: 0 auto 12px; }                                                                              
-      .hero p { font-size: 16px; color: var(--muted); max-width: 520px; margin: 0 auto 32px; }
-      .video-section { background: var(--navy); padding: 40px 24px 48px; }                                              
-      .video-wrapper { max-width: 780px; margin: 0 auto; }                                                              
-      .video-container { width: 100%; aspect-ratio: 16/9; background: #0a1220; border-radius: 8px; overflow: hidden;    
-  border: 2px solid rgba(200,146,42,0.2); }                                                                             
-      .video-container iframe, .video-container video { width: 100%; height: 100%; border: none; display: block; }      
-      .video-placeholder { width: 100%; height: 100%; display: flex; align-items: center; justify-content: center;      
-  background: linear-gradient(135deg, #0f1b2d 0%, #1a2d4a 100%); flex-direction: column; gap: 12px; }                   
-      .video-placeholder p { color: rgba(255,255,255,0.4); font-size: 14px; font-style: italic; }                       
-      .video-placeholder .placeholder-icon { width: 64px; height: 64px; background: rgba(200,146,42,0.15);              
-  border-radius: 50%; display: flex; align-items: center; justify-content: center; border: 2px solid                    
-  rgba(200,146,42,0.3); }                                                                                               
-      .video-placeholder .placeholder-icon svg { width: 28px; height: 28px; fill: var(--accent); margin-left: 4px; }    
-      .cta-section { background: var(--white); padding: 48px 24px; text-align: center; border-top: 1px solid            
-  var(--border); }                                                                                                      
-      .cta-inner { max-width: 580px; margin: 0 auto; }                                                                  
-      .cta-section h2 { font-size: clamp(20px, 3vw, 28px); font-weight: 800; color: var(--navy); line-height: 1.3;      
-  margin-bottom: 12px; }                                                                                                
-      .cta-section p { font-size: 16px; color: var(--muted); margin-bottom: 32px; line-height: 1.6; }                   
-      .btn-cta { display: inline-block; padding: 18px 40px; background: var(--accent); color: var(--white); font-size:  
-  17px; font-weight: 700; border-radius: 6px; text-decoration: none; transition: background 0.2s, transform 0.1s;       
-  letter-spacing: 0.02em; }                                                                                             
-      .btn-cta:hover { background: var(--accent-hover); transform: translateY(-1px); }                                  
-      .cta-section .reassurance { font-size: 13px; color: #aaa; margin-top: 16px; }                                     
-      .footer { background: var(--navy); padding: 24px; text-align: center; }                                           
-      .footer p { color: rgba(255,255,255,0.4); font-size: 12px; line-height: 1.6; }                                    
-      @media (max-width: 600px) { .hero { padding: 36px 20px 16px; } .video-section { padding: 28px 16px 36px; }        
-  .cta-section { padding: 36px 20px; } }                                                                                
-    </style>                                                                                                            
-  </head>                                                                                                               
-  <body>          
-    <div class="header-bar"><p>Formation gratuite — Le Code Féminin</p></div>
-    <section class="hero">                                                                                              
-      <span class="step">Étape 1 sur 2</span>
-      <h1>Regardez cette vidéo jusqu'au bout avant de passer à l'étape suivante</h1>                                    
-      <p>Olivia vous explique exactement pourquoi votre femme s'éloigne — et comment inverser ça.</p>                   
-    </section>                                                                                                          
-    <section class="video-section">                                                                                     
-      <div class="video-wrapper">                                                                                       
-        <div class="video-container">
-          <div class="video-placeholder">         
-            <div class="placeholder-icon"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>                
-            <p>Vidéo VSL à intégrer ici</p>                                                             
-          </div>                                                                                                        
-        </div>                                                                                                          
-      </div>  
-    </section>                                                                                                          
-    <section class="cta-section">
-      <div class="cta-inner">    
-        <h2>Prêt à inverser la trajectoire de votre couple ?</h2>                                                       
-        <p>Réservez votre appel gratuit avec Olivia. En 45 minutes, vous repartirez avec un plan d'action concret —
-  adapté à votre situation.</p>                                                                                         
-        <a href="confirmation.html" class="btn-cta">Réserver mon appel gratuit →</a>                                    
-        <p class="reassurance">Gratuit · Sans engagement · Places limitées</p>      
-      </div>                                                                                                            
-    </section>                                                                                                          
-    <footer class="footer">                                                                                             
-      <p>© 2026 Olivia Nicholls Coaching · Tous droits réservés<br>Les résultats présentés ne sont pas garantis et      
-  varient selon les situations individuelles.</p>                                                                 
-    </footer>                                    
-  </body>    
-  </html>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root { --navy: #0f1b2d; --accent: #c8922a; --text: #1a1a1a; --muted: #666; --bg: #f5f0e8; --white: #ffffff;
+  --border: #e0d8cc; }
+
+    body { font-family: 'Inter', sans-serif !important; background: var(--bg); color: var(--text); }
+
+    /* Header bar fixe */
+    .vsl-header { position: fixed; top: 0; left: 0; right: 0; z-index: 9998; background: var(--navy); color:
+  var(--white); text-align: center; font-family: 'Inter', sans-serif; font-size: 13px; font-weight: 700; letter-spacing:
+   0.1em; text-transform: uppercase; padding: 12px 20px; }
+
+    /* Wrapper */
+    .vsl-wrap { max-width: 680px; margin: 0 auto; padding: 80px 20px 60px; text-align: center; font-family: 'Inter',
+  sans-serif; }
+
+    /* Badge */
+    .vsl-badge { display: inline-flex; align-items: center; gap: 8px; background: var(--navy); color: var(--white);
+  font-size: 12px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; padding: 8px 22px; border-radius:
+   40px; margin-bottom: 24px; }
+    @keyframes vslBlink { 0%, 100% { opacity: 1; } 50% { opacity: 0.2; } }
+    .vsl-badge .vsl-dot { width: 8px; height: 8px; background: var(--accent); border-radius: 50%; flex-shrink: 0;
+  animation: vslBlink 1.4s ease-in-out infinite; }
+
+    /* Headline */
+    .vsl-h1 { font-size: clamp(22px, 4vw, 30px); font-weight: 900; color: var(--navy); line-height: 1.25; margin-bottom:
+   28px; letter-spacing: -0.01em; }
+    .vsl-h1 strong { color: var(--accent); font-weight: 900; }
+
+    /* Video */
+    .vsl-video-wrap { border: 3px solid var(--accent); border-radius: 10px; overflow: hidden; margin-bottom: 24px;
+  box-shadow: 0 8px 32px rgba(15,27,45,0.15); }
+    .vsl-video-wrap iframe { display: block; width: 100%; aspect-ratio: 16/9; border: none; }
+
+    /* Placeholder video (à remplacer par l'iframe) */
+    .vsl-placeholder { width: 100%; aspect-ratio: 16/9; background: linear-gradient(135deg, #0f1b2d 0%, #1a2d4a 100%);
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; }
+    .vsl-placeholder-play { width: 64px; height: 64px; background: var(--accent); border-radius: 50%; display: flex;
+  align-items: center; justify-content: center; }
+    .vsl-placeholder-play svg { width: 24px; height: 24px; fill: white; margin-left: 4px; }
+    .vsl-placeholder-text { color: rgba(255,255,255,0.4); font-size: 13px; font-style: italic; font-family: 'Inter',
+  sans-serif; }
+
+    /* Surprise text */
+    .vsl-surprise { font-size: 15px; font-weight: 700; color: var(--navy); margin-bottom: 16px; line-height: 1.5; }
+
+    /* Trait vertical sous la surprise */
+    .vsl-line { width: 1px; height: 48px; background: var(--border); margin: 0 auto 32px; }
+
+    /* CTA Block */
+    .vsl-cta { margin-bottom: 8px; }
+    .vsl-btn { display: inline-block; width: 100%; max-width: 520px; padding: 20px 24px; background: var(--navy); color:
+   var(--white); font-family: 'Inter', sans-serif; font-size: 16px; font-weight: 900; letter-spacing: 0.06em;
+  text-transform: uppercase; text-decoration: none; border-radius: 8px; cursor: pointer; transition: background 0.2s,
+  transform 0.1s; line-height: 1.3; }
+    .vsl-btn:hover { background: #1c2f4a; transform: translateY(-1px); }
+    .vsl-btn-sub { display: block; font-size: 12px; font-weight: 500; opacity: 0.6; letter-spacing: 0.03em;
+  text-transform: none; margin-top: 4px; }
+    .vsl-disclaimer { font-size: 13px; color: var(--muted); margin-top: 14px; font-style: italic; line-height: 1.5; }
+
+    /* Separator */
+    .vsl-sep { display: flex; align-items: center; gap: 12px; margin: 36px 0 32px; }
+    .vsl-sep::before, .vsl-sep::after { content: ''; flex: 1; height: 1px; background: var(--border); }
+    .vsl-diamond { width: 6px; height: 6px; background: var(--accent); transform: rotate(45deg); flex-shrink: 0; }
+
+    /* Footer */
+    .vsl-footer { padding-top: 24px; border-top: 1px solid var(--border); text-align: center; }
+    .vsl-footer-links { margin-bottom: 10px; }
+    .vsl-footer-links a { color: var(--navy); font-weight: 600; font-size: 13px; text-decoration: underline;
+  text-underline-offset: 3px; }
+    .vsl-footer-links a:hover { color: var(--accent); }
+    .vsl-footer-links .sep { margin: 0 8px; color: #bbb; }
+    .vsl-footer-copy { font-size: 12px; color: #999; margin-bottom: 8px; line-height: 1.7; }
+    .vsl-footer-legal { font-size: 11px; color: #888; line-height: 1.65; max-width: 460px; margin: 0 auto; }
+
+    @media (max-width: 480px) { .vsl-wrap { padding-top: 72px; } .vsl-header { font-size: 11px; padding: 10px 16px; }
+  .vsl-h1 { font-size: 18px; } }
+  </style>
+  
+  <!-- Header bar -->
+  <div class="vsl-header">Ne quitte pas cette page</div>
+
+  <!-- Contenu principal -->
+  <div class="vsl-wrap">
+
+    <div class="vsl-badge"><span class="vsl-dot"></span>F&eacute;licitations !</div>
+
+    <h1 class="vsl-h1">Regarde cette vid&eacute;o <strong>jusqu'au bout</strong>&nbsp;:</h1>
+  
+    <div class="vsl-video-wrap">
+      <div id="vidalytics_embed_OANjKhF7SURICaR0" style="width: 100%; position:relative; padding-top: 56.25%;"></div>
+      <script type="text/javascript">
+      (function (v, i, d, a, l, y, t, c, s) {
+          y='_'+d.toLowerCase();c=d+'L';if(!v[d]){v[d]={};}if(!v[c]){v[c]={};}if(!v[y]){v[y]={};}var
+  vl='Loader',vli=v[y][vl],vsl=v[c][vl + 'Script'],vlf=v[c][vl + 'Loaded'],ve='Embed';
+          if (!vsl){vsl=function(u,cb){
+              if(t){cb();return;}s=i.createElement("script");s.type="text/javascript";s.async=1;s.src=u;
+              if(s.readyState){s.onreadystatechange=function(){if(s.readyState==="loaded"||s.readyState=="complete"){s.o
+  nreadystatechange=null;vlf=1;cb();}};}else{s.onload=function(){vlf=1;cb();};}
+              i.getElementsByTagName("head")[0].appendChild(s);
+          };}
+          vsl(l+'loader.min.js',function(){if(!vli){var vlc=v[c][vl];vli=new
+  vlc();}vli.loadScript(l+'player.min.js',function(){var vec=v[d][ve];t=new vec();t.run(a);});});
+      })(window, document, 'Vidalytics', 'vidalytics_embed_OANjKhF7SURICaR0',
+  'https://fast.vidalytics.com/embeds/1GVvFh1S/OANjKhF7SURICaR0/');
+      </script>
+    </div>
+  
+    <!-- Texte "surprise" — disparaît quand le bouton apparaît -->
+    <p class="vsl-surprise" id="olVslSurprise">&#x1F447; Une surprise appara&icirc;tra juste ici dans quelques minutes
+  &#x1F447;</p>
+
+    <div class="vsl-line" id="olVslLine"></div>
+  
+    <!-- Bouton CTA — caché par défaut, apparaît après délai -->
+    <div class="vsl-cta" id="olVslCta" style="display:none">
+      <!-- Remplacer # par le lien Calendly d'Olivia -->
+      <a href="#" class="vsl-btn">
+        R&eacute;server mon appel gratuit &rarr;
+        <span class="vsl-btn-sub">Olivia Nicholls Coaching &middot; Places limit&eacute;es</span>
+      </a>
+      <p class="vsl-disclaimer">(R&eacute;serv&eacute; aux hommes qui correspondent au profil d&eacute;crit dans la
+  vid&eacute;o)</p>
+    </div>
+
+    <div class="vsl-sep"><span class="vsl-diamond"></span></div>
+
+    <div class="vsl-footer">
+      <div class="vsl-footer-links">
+        <a href="https://olivianicholls.site/politique-confidentialite-page">Politique de confidentialit&eacute;</a>
+        <span class="sep">&middot;</span>
+        <a href="https://olivianicholls.site/cgv-page">CGV</a>
+      </div>
+      <p class="vsl-footer-copy">&copy; 2026 Olivia Nicholls Coaching &middot; Tous droits r&eacute;serv&eacute;s.</p>
+      <p class="vsl-footer-legal">Ce site n'est pas affilié à Facebook™ ou Meta Platforms Inc. Les résultats mentionnés
+  sont des témoignages individuels. Vos résultats peuvent varier en fonction de votre situation personnelle et de votre
+  implication.</p>
+    </div>
+  
+  </div>
+
+  <script>
+  // ─── CONFIGURATION ───────────────────────────────────────────────
+  // 0 = bouton toujours visible
+  // X = bouton apparait apres X secondes (ex: 300 = 5 minutes)
+  var OL_BTN_DELAY = 0;
+  // ─────────────────────────────────────────────────────────────────
+
+  function olVslShowCta() {
+    var cta = document.getElementById('olVslCta');
+    var surprise = document.getElementById('olVslSurprise');
+    var line = document.getElementById('olVslLine');
+    if (cta) cta.style.display = 'block';
+    if (surprise) surprise.style.display = 'none';
+    if (line) line.style.display = 'none';
+  }
+
+  if (OL_BTN_DELAY === 0) {
+    olVslShowCta();
+  } else {
+    setTimeout(olVslShowCta, OL_BTN_DELAY * 1000);
+  }
+  </script>
