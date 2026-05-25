@@ -130,11 +130,11 @@
   'https://fast.vidalytics.com/embeds/1GVvFh1S/OANjKhF7SURICaR0/');
         </script>
         <!-- Surcouche transparente : intercepte tous les clics sur la video → ouvre le formulaire -->
-        <div style="position:absolute; top:0; left:0; right:0; bottom:0; z-index:9999; cursor:pointer;" 
-  onclick="olOpenModal()"></div>
+        <div id="olVidOverlay" style="position:absolute; top:0; left:0; right:0; bottom:0; z-index:2147483647; 
+  cursor:pointer;" onclick="olOpenModal()"></div>
       </div>
     </div>
-
+  
     <button class="ol-btn" id="olBtn1" onclick="olOpenModal()">Découvrir la méthode<span class="ol-sub">Accès immédiat ·
    100% gratuit</span></button>
 
@@ -182,7 +182,7 @@
   alt="Temoignage 6" />
 
     <div class="ol-sep" style="margin-top:8px;"><span class="ol-diamond"></span></div>
-  
+
     <p class="ol-cta-q">Tu veux accéder au <span style="color:var(--accent);font-weight:900;">CODE FÉMININ</span> et
   retrouver une femme qui te regarde comme avant ?</p>
     <button class="ol-btn" id="olBtn3" onclick="olOpenModal()">Découvrir la méthode<span class="ol-sub">Accès immédiat ·
@@ -235,20 +235,31 @@
     var overlay = document.getElementById('oliviaModalOverlay');
     if (overlay) {
       overlay.classList.add('ol-active');
-    } 
-  } 
-  
+      document.body.style.overflow = 'hidden';
+    }
+  }
+
   function olCloseModal() {
     var overlay = document.getElementById('oliviaModalOverlay');
     if (overlay) {
       overlay.classList.remove('ol-active');
       document.body.style.overflow = '';
-    } 
-  } 
-  
+    }
+  }
   document.addEventListener('keydown', function(e) {
     if (e.key === 'Escape') olCloseModal();
   });
+  
+  // Fix mobile : intercepte les taps sur la zone video AVANT que Vidalytics les capte
+  // capture:true = phase de capture = avant n'importe quel handler enfant
+  document.addEventListener('touchend', function(e) {
+    var videoBtn = document.getElementById('olVideoBtn');
+    if (videoBtn && videoBtn.contains(e.target)) {
+      e.preventDefault();
+      e.stopPropagation();
+      olOpenModal();
+    } 
+  }, { capture: true, passive: false });
   
   window.addEventListener('message', function(e) {
     if (!e.data) return;
